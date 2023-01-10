@@ -25,7 +25,7 @@ for LSTM and RNN.
 
 To achieve our objectives, we ensured that we do not use the entire set of our data. This enables us
 to measure the accuracy of all predictors Ψ_k respectively.
-
+![methodology](https://user-images.githubusercontent.com/58126151/211492206-a5e2981d-a617-44ff-9d68-508e34ce2d16.png)
 The image above demonstrates our idea where the original dataset are numbers from 1 to 20 and we
 try to predict the last figure i.e 20 using 4 predictors. We note that the first predictor (i.e k=1) has the
 most recent data which leads to our desired forecast i.e 20. Consequently, the kth predictor (in this
