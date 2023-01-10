@@ -10,8 +10,11 @@ symbols of the sequence past.
 The algorithm is as follows:
 
 Ψ_1: input [s(t-M), s(t-M+1), ..., s(t- 1 )] output s(t)
+
 Ψ_2 : input [s(t-M- 1 ), s(t-M), ..., s(t- 2 )] output s(t)
+
 ...
+
 Ψ_k: input [s(t-M-(k-1) ),..., s(t-M-k)] output s(t).
 
 Having done this, we proceeded to create, code, and train another set of deep models i.e new MLP
