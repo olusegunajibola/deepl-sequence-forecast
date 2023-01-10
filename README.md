@@ -39,9 +39,14 @@ We apply this methodology to the pi digit numbers and Italia positive giornalier
 
 We first make a preliminary visualization of our datasets to see the evolution.
 
+![Data viz - covid](https://user-images.githubusercontent.com/58126151/211492833-4b5fa44f-4b4b-4abc-b24e-ee9dc2cb8863.png)
+
+
 The image above shows us the evolution of covid occurrence in Italy over about 700 days. This is the
 Italia positive giornaliero data. We notice a peak around the 300th day. Our desire is to predict the last
 day in the data i.e **15,9317**.
+
+![Data viz - pi 1000 digits](https://user-images.githubusercontent.com/58126151/211492941-a477ae8a-7590-4f22-8c14-b8f801e281e1.png)
 
 Secondly, the data we have is the pi digits i.e 3.14... The visualization above depicts the first 1,
 digits after removing ‘3.’. As a result, our desire is to predict the 1000th digit i.e **9**.
@@ -53,6 +58,8 @@ For both datasets, we build deep learning models of MLP, RNN and LSTM of 20 pred
 
 ### MLP – COVID DATA
 
+![MLP – COVID DATA](https://user-images.githubusercontent.com/58126151/211493122-d20bf564-2f3f-467d-89b6-0fb1a39b1efa.png)
+
 The LSTM earliest predictor (1, 2, 3) models on the covid data gave us figures that are very close to
 the actual value we were looking for. Furthermore, the most accurate predictor was the 9th predictor.
 Nevertheless, we begin to have figures that were consistently far off the expected prediction from the
@@ -60,6 +67,8 @@ Nevertheless, we begin to have figures that were consistently far off the expect
 above the expected prediction.
 
 ### MLP – PI NUMBERS
+
+![MLP – PI NUMBERS](https://user-images.githubusercontent.com/58126151/211493194-dd4da25c-0c85-4468-9e4b-e361162065c7.png)
 
 This time around, the LSTM gave us negative values in prediction. This is notable in the 1st, 2nd, and 4th
 predictor. The third predictor was the only one that gave us the best prediction even though the 14th
@@ -69,12 +78,16 @@ negative predictions have been removed.
 
 ### LSTM – PI NUMBERS
 
+![LSTM – PI NUMBERS](https://user-images.githubusercontent.com/58126151/211493281-c5e9f61a-d931-43f4-b658-4908eeca7135.png)
+
 This time around, the LSTM 8th predictor gave us the closest figure to the actual value we are looking
 for. Nevertheless, it only had one negative value predictions (for the 13th predictor). Also, the
 prediction by the combination of all predictors gave us our second best prediction. We removed the
 negative predictor to achieve this. The best predictor was the 8th.
 
 ### LSTM – COVID DATA
+
+![ LSTM – COVID DATA](https://user-images.githubusercontent.com/58126151/211493374-20488e8d-3090-45e1-bd4e-d6a2c5f87b30.png)
 
 Just as observed in the MLP model where the prediction power became poor, we notice the same
 here the further we go away from s(t). In this instance, the 12th to 20th predictors gave awful results.
@@ -84,6 +97,8 @@ predictors gave a fair output.
 
 ### RNN – COVID DATA
 
+![RNN – COVID DATA](https://user-images.githubusercontent.com/58126151/211493483-2faef283-19b2-45fd-a1f9-fbdea42beae5.png)
+
 Again, consistent declines are visible after the 12th predictor. The 4th predictor was the best.
 Nevertheless, the first 5 predictors were good enough to be considered as well. Finally, the
 combination of prediction by the predictors to make a forecast gave us a value that we can consider
@@ -91,6 +106,9 @@ to be somewhat off-mark. Please note that this model did not output negative val
 was wrong. It should be **average of predictors** instead.
 
 ### RNN – Pi Digits
+
+![RNN – Pi Digits](https://user-images.githubusercontent.com/58126151/211493538-5cc4da28-f0c4-4c91-a333-5584b53057af.png)
+
 
 The RNN model built gave a prediction that was way above the expected output in the 4th predictor.
 The best predictor in this case is the prediction gotten by the combination of values from all predictors.
@@ -105,12 +123,16 @@ compare.
 
 ### COVID Data
 
+![conclusion COVID Data](https://user-images.githubusercontent.com/58126151/211493660-39c16bd7-e0e9-4aea-9fe6-d890caa71ab2.png)
+
 Collectively, for the first two predictors, we had values that are close to the actual value for all models
 under consideration. Also, from the 14th predictor, we notice consistent declines. From this graph, we
 can conclude that the MLP model performs best for sequence prediction on the COVID dataset given
 the algorithm under study as it was consistent in its forecast at every predictor.
 
 ### Pi Digits
+
+![conclusion Pi Digits](https://user-images.githubusercontent.com/58126151/211493731-d84a2d17-4711-4ca3-a315-6591f4b71364.png)
 
 We notice here that both the LSTM and MLP predictors gave negative predictions (amongst their pre).
 Whereas the RNN predictors gave us a value that was way too high in its 4th predictor. Nevertheless,
